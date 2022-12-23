@@ -1,0 +1,99 @@
+package com.example.applestore.FragmentsForActivity;
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.example.applestore.Adapters.MyAdapterMac;
+import com.example.applestore.List.MainList;
+import com.example.applestore.R;
+
+import java.util.ArrayList;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link PhonesFragment_Activity#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class PhonesFragment_Activity extends Fragment {
+
+    private ArrayList<MainList> PhonesArrayList = new ArrayList<>();
+
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public PhonesFragment_Activity() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment PhonesFragment_Activity.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static PhonesFragment_Activity newInstance(String param1, String param2) {
+        PhonesFragment_Activity fragment = new PhonesFragment_Activity();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_phones__activity, container, false);
+
+        buildListData();
+        initRecyclerView(view);
+        return view;
+    }
+
+    private void initRecyclerView(View view) {
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewiPhones);
+        GridLayoutManager GridLayout = new GridLayoutManager(getActivity(), 2);
+
+        recyclerView.setLayoutManager(GridLayout);
+        MyAdapterMac adapter = new MyAdapterMac(PhonesArrayList);
+        recyclerView.setAdapter(adapter);
+
+    }
+
+    private void buildListData() {
+        PhonesArrayList.add(new MainList("iPhone 14 PRO",R.drawable.iphone_14_pro));
+        PhonesArrayList.add(new MainList("iPhone 14",R.drawable.iphone_14_));
+        PhonesArrayList.add(new MainList("iPhone 13 PRO",R.drawable.iphone_14_promax));
+        PhonesArrayList.add(new MainList("iPhone 13",R.drawable.iphone_13));
+        PhonesArrayList.add(new MainList("Macbook Air M1 pro 16 polegadas",R.drawable.macpro_16_pol));
+
+
+    }
+}

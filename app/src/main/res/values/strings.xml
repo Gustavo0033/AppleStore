@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Apple Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Produto">Nome do produto</string>
+    <string name="Produto1">Nome do produto1</string>
+    <string name="Produto2">Nome do produto2</string>
+    <string name="Produto3">Nome do produto3</string>
+    <string name="Produto4">Nome do produto4</string>
+    <string name="Produto5">Nome do produto5</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/icon_home"
+        android:id="@+id/Home"/>
+
+    <item android:title="Phones"
+        android:icon="@drawable/icon_iphone"
+        android:id="@+id/Phones"/>
+
+    <item android:title="Macbook"
+        android:icon="@drawable/icon_macbook_png"
+        android:id="@+id/Macbook"/>
+
+    <item android:title="AppleWatch"
+        android:icon="@drawable/apple_watch"
+        android:id="@+id/AppleWatch"/>
+
+    <item android:title="More"
+        android:icon="@drawable/icon_more"
+        android:id="@+id/More"/>
+</menu>
