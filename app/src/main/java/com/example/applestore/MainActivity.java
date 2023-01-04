@@ -7,10 +7,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.example.applestore.Fragments.AppleWatchFragment;
 import com.example.applestore.Fragments.HomeFragment;
-import com.example.applestore.Fragments.MoreFragment;
+import com.example.applestore.FragmentsForActivity.AppleWatchragment_Activity;
 import com.example.applestore.FragmentsForActivity.MacbookFragment_Activity;
+import com.example.applestore.FragmentsForActivity.MoreFragment_Activity;
 import com.example.applestore.FragmentsForActivity.PhonesFragment_Activity;
 import com.example.applestore.FragmentsForActivity.TesteFragment;
 import com.example.applestore.databinding.ActivityMainBinding;
@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new MacbookFragment_Activity());
                     break;
                 case R.id.AppleWatch:
-                    replaceFragment(new AppleWatchFragment());
+                    replaceFragment(new AppleWatchragment_Activity());
                     break;
                 case R.id.More:
-                    replaceFragment(new MoreFragment());
+                    replaceFragment(new MoreFragment_Activity());
                     break;
             }
 

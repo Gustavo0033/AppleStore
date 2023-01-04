@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentsForActivity.TesteFragment">
+    tools:context=".FragmentsForActivity.MoreFragment_Activity">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewWIthImage"
+        android:id="@+id/recyclerViewMore"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/produtos02_apenas_imagem" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/horizontal_nameproducts"/>
 
 </FrameLayout>

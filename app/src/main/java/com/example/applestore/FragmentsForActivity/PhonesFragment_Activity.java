@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.applestore.Adapters.MyAdapterMac;
+import com.example.applestore.Adapters.MyAdapterPhones;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -79,20 +80,28 @@ public class PhonesFragment_Activity extends Fragment {
 
     private void initRecyclerView(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewiPhones);
-        GridLayoutManager GridLayout = new GridLayoutManager(getActivity(), 2);
+        GridLayoutManager GridLayoutManager = new GridLayoutManager(getActivity(), 2);
 
-        recyclerView.setLayoutManager(GridLayout);
-        MyAdapterMac adapter = new MyAdapterMac(PhonesArrayList);
+        recyclerView.setLayoutManager(GridLayoutManager);
+        MyAdapterPhones adapter = new MyAdapterPhones(PhonesArrayList);
         recyclerView.setAdapter(adapter);
 
     }
 
     private void buildListData() {
+        PhonesArrayList.add(new MainList("iPhone 14",R.drawable.iphone_14));
+        PhonesArrayList.add(new MainList("iPhone 14 Plus",R.drawable.iphone_14plus));
         PhonesArrayList.add(new MainList("iPhone 14 PRO",R.drawable.iphone_14_pro));
-        PhonesArrayList.add(new MainList("iPhone 14",R.drawable.iphone_14_));
-        PhonesArrayList.add(new MainList("iPhone 13 PRO",R.drawable.iphone_14_promax));
+        PhonesArrayList.add(new MainList("iPhone 14 PRO MAX",R.drawable.iphone_14_promax));
+        PhonesArrayList.add(new MainList("iPhone 13 Mini",R.drawable.iphone13_mini));
         PhonesArrayList.add(new MainList("iPhone 13",R.drawable.iphone_13));
-        PhonesArrayList.add(new MainList("Macbook Air M1 pro 16 polegadas",R.drawable.macpro_16_pol));
+        PhonesArrayList.add(new MainList("iPhone 13 Pro",R.drawable.iphone13_pro));
+        PhonesArrayList.add(new MainList("iPhone 13 Pro Max",R.drawable.iphone13_promax));
+        PhonesArrayList.add(new MainList("iPhone 12 Mini",R.drawable.iphone12_mini));
+        PhonesArrayList.add(new MainList("iPhone 12",R.drawable.iphone12));
+        PhonesArrayList.add(new MainList("iPhone 12 Pro",R.drawable.banner_iplace_quick_filter_iphone_12_pro_cat));
+        PhonesArrayList.add(new MainList("iPhone 12 Pro Max",R.drawable.iphone12_promax));
+
 
 
     }
