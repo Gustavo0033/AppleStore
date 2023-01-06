@@ -10,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
+import com.example.applestore.Adapters.MyAdapterAW;
 import com.example.applestore.Adapters.MyAdapterMac;
-import com.example.applestore.Adapters.MyAdapterMain;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -21,12 +20,12 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MacbookFragment_Activity#newInstance} factory method to
+ * Use the {@link AppleWatchragment_Activity#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MacbookFragment_Activity extends Fragment {
+public class AppleWatchragment_Activity extends Fragment {
 
-    private ArrayList<MainList> MacArrayList = new ArrayList<>();
+    private ArrayList<MainList> AppleWatchArrayList = new java.util.ArrayList<>();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,7 +36,7 @@ public class MacbookFragment_Activity extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MacbookFragment_Activity() {
+    public AppleWatchragment_Activity() {
         // Required empty public constructor
     }
 
@@ -47,11 +46,11 @@ public class MacbookFragment_Activity extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MacbookFragment_Activity.
+     * @return A new instance of fragment AppleWatchragment_Activity.
      */
     // TODO: Rename and change types and number of parameters
-    public static MacbookFragment_Activity newInstance(String param1, String param2) {
-        MacbookFragment_Activity fragment = new MacbookFragment_Activity();
+    public static AppleWatchragment_Activity newInstance(String param1, String param2) {
+        AppleWatchragment_Activity fragment = new AppleWatchragment_Activity();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -72,7 +71,7 @@ public class MacbookFragment_Activity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_macbook__activity, container, false);
+        View view = inflater.inflate(R.layout.fragment_apple_watchragment__activity, container, false);
 
         buildListData();
         initRecyclerView(view);
@@ -80,20 +79,24 @@ public class MacbookFragment_Activity extends Fragment {
     }
 
     private void initRecyclerView(View view) {
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewMac);
-        GridLayoutManager Grid = new GridLayoutManager(getActivity(),2);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewAppleWatch);
+        GridLayoutManager Grid = new GridLayoutManager(getActivity(),2 );
 
         recyclerView.setLayoutManager(Grid);
-        MyAdapterMac adapter = new MyAdapterMac(MacArrayList);
+        MyAdapterAW adapter = new MyAdapterAW(AppleWatchArrayList);
         recyclerView.setAdapter(adapter);
     }
 
     private void buildListData() {
-        MacArrayList.add(new MainList("Macbook Air M1",R.drawable.macbook_air_m1));
-        MacArrayList.add(new MainList("Macbook Air M2",R.drawable.macbook_air_m2));
-        MacArrayList.add(new MainList("Macbook Pro M1 PRO 13 polegadas",R.drawable.mac_pro_13pol));
-        MacArrayList.add(new MainList("Macbook Air M1 pro 14 polegadas",R.drawable.macpro_14pol));
-        MacArrayList.add(new MainList("Macbook Air M1 pro 16 polegadas",R.drawable.macpro_16_pol));
+        AppleWatchArrayList.add(new MainList("Apple Watch Ultra",R.drawable.applewatch_ultra));
+        AppleWatchArrayList.add(new MainList("Apple Watch Series 8",R.drawable.applewatch_series8));
+        AppleWatchArrayList.add(new MainList("Apple Watch SE",R.drawable.applewatchse));
+        AppleWatchArrayList.add(new MainList("Apple Watch Series 7",R.drawable.applewatch_series7));
+        AppleWatchArrayList.add(new MainList("Apple Watch Series 6",R.drawable.applewatch6));
+        AppleWatchArrayList.add(new MainList("Apple Watch Series 5",R.drawable.applewatch5));
+        AppleWatchArrayList.add(new MainList("Apple Watch Series 3",R.drawable.applewatch3));
+        AppleWatchArrayList.add(new MainList("Apple Watch Nike+",R.drawable.applewatchnike));
+
 
 
     }

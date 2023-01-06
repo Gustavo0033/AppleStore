@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.applestore.Adapters.MyAdapterMain;
 import com.example.applestore.List.ListForImage;
@@ -25,6 +26,7 @@ import java.util.ArrayList;
  */
 public class TesteFragment extends Fragment {
     private ArrayList<MainList> MainArrayListHome = new ArrayList<>();
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -79,9 +81,9 @@ public class TesteFragment extends Fragment {
     private void initRecyclerView(View view) {
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewWIthImage);
-        GridLayoutManager GridLayout = new GridLayoutManager(getActivity(), 2);
+        LinearLayoutManager LinearLayout = new LinearLayoutManager(getActivity());
 
-        recyclerView.setLayoutManager(GridLayout);
+        recyclerView.setLayoutManager(LinearLayout);
         MyAdapterMain adapter = new MyAdapterMain(MainArrayListHome);
         recyclerView.setAdapter(adapter);
     }
@@ -93,4 +95,5 @@ public class TesteFragment extends Fragment {
         MainArrayListHome.add((new MainList("iPads", R.drawable.ipads_home)));
 
     }
+
 }

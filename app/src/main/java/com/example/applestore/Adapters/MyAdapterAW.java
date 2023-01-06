@@ -3,7 +3,6 @@ package com.example.applestore.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,54 +14,44 @@ import com.example.applestore.R;
 
 import java.util.ArrayList;
 
-public class MyAdapterMain extends RecyclerView.Adapter<MyAdapterMain.MyViewHolderMain> {
+public class MyAdapterAW extends RecyclerView.Adapter<MyAdapterAW.MyViewHolderAW> {
 
+    ArrayList<MainList> AppleWatchArrayList;
 
-    ArrayList<MainList> MainArrayListHome;
-
-
-    public MyAdapterMain(ArrayList<MainList> MainArrayListHome){
-        this.MainArrayListHome = MainArrayListHome;
-
+    public MyAdapterAW(ArrayList<MainList> appleWatchArrayList) {
+        AppleWatchArrayList = appleWatchArrayList;
     }
 
     @NonNull
     @Override
-    public MyViewHolderMain onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolderAW onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.produtos,parent,false);
-        return new MyViewHolderMain(v);
+        return new MyViewHolderAW(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolderMain holder, int position) {
-
-      holder.imageProduct.setImageResource(MainArrayListHome.get(position).getImageProduct());
-      holder.TextProduct.setText(MainArrayListHome.get(position).getTextProduct());
-
-
-
+    public void onBindViewHolder(@NonNull MyViewHolderAW holder, int position) {
+        holder.imageProduct.setImageResource(AppleWatchArrayList.get(position).getImageProduct());
+        holder.TextProduct.setText(AppleWatchArrayList.get(position).getTextProduct());
 
 
     }
 
     @Override
     public int getItemCount() {
-        return MainArrayListHome.size();
+        return AppleWatchArrayList.size();
     }
 
-    public static class MyViewHolderMain extends RecyclerView.ViewHolder{
+    public static class MyViewHolderAW extends RecyclerView.ViewHolder{
 
         ImageView imageProduct;
         TextView TextProduct;
 
-
-        public MyViewHolderMain(@NonNull View itemView) {
+        public MyViewHolderAW(@NonNull View itemView) {
             super(itemView);
-
 
             imageProduct = itemView.findViewById(R.id.imageProduct);
             TextProduct = itemView.findViewById(R.id.TextProdut);
-
         }
     }
 }

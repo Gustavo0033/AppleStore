@@ -7,8 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentsIphone.fragmente_iphone14plus;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -16,10 +18,12 @@ import java.util.ArrayList;
 
 public class MyAdapterPhones extends RecyclerView.Adapter<MyAdapterPhones.MyViewHolderPhones>{
 
-    ArrayList<MainList> PhonesArrayList;
+     private ArrayList<MainList> PhonesArrayList;
+
 
     public MyAdapterPhones(ArrayList<MainList> phonesArrayList) {
         PhonesArrayList = phonesArrayList;
+
     }
 
     @NonNull
@@ -34,6 +38,31 @@ public class MyAdapterPhones extends RecyclerView.Adapter<MyAdapterPhones.MyView
 
         holder.imageProduct.setImageResource(PhonesArrayList.get(position).getImageProduct());
         holder.textProduct.setText(PhonesArrayList.get(position).getTextProduct());
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (position ==0) {  //FAZER PARA O IPHONE 14 AGORA
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                fragmente_iphone14plus fragmenteiphone14plus = new fragmente_iphone14plus();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragmenteiphone14plus).addToBackStack(null).commit();
+            }
+                else if(position==1){
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    fragmente_iphone14plus fragmenteiphone14plus = new fragmente_iphone14plus();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragmenteiphone14plus).addToBackStack(null).commit();
+                }
+                else if(position==2){
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    fragmente_iphone14plus fragmenteiphone14plus = new fragmente_iphone14plus();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragmenteiphone14plus).addToBackStack(null).commit();
+                }
+
+            }
+        });
+
     }
 
     @Override
@@ -45,12 +74,18 @@ public class MyAdapterPhones extends RecyclerView.Adapter<MyAdapterPhones.MyView
 
         TextView textProduct;
         ImageView imageProduct;
+        View Colorback;
+
 
         public MyViewHolderPhones(@NonNull View itemView) {
             super(itemView);
 
             textProduct = itemView.findViewById(R.id.TextProdut);
             imageProduct = itemView.findViewById(R.id.imageProduct);
+
+
         }
     }
+
+
 }

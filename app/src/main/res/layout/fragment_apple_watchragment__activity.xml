@@ -3,24 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rec"
-    tools:context=".FragmentsForActivity.PhonesFragment_Activity">
+    tools:context=".FragmentsForActivity.AppleWatchragment_Activity">
 
     <!-- TODO: Update blank fragment layout -->
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="94dp"
-        android:src="@drawable/icon_iphone">
-    </ImageView>
-
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewiPhones"
+        android:id="@+id/recyclerViewAppleWatch"
         android:layout_width="match_parent"
-        android:layout_height="637dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="716dp"
         tools:listitem="@layout/produtos" />
 
 </FrameLayout>

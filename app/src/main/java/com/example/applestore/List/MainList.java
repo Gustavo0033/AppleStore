@@ -5,9 +5,11 @@ public class MainList {
     String TextProduct;
     int ImageProduct;
 
+
     public MainList(String textProduct, int imageProduct) {
         TextProduct = textProduct;
         ImageProduct = imageProduct;
+
     }
 
     public String getTextProduct() {
@@ -25,4 +27,5 @@ public class MainList {
     public void setImageProduct(int imageProduct) {
         ImageProduct = imageProduct;
     }
+
 }

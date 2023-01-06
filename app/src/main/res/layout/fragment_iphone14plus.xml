@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/testeteste"
-    tools:context=".FragmentsForActivity.TesteFragment">
+    android:id="@+id/testsdefragment"
+    android:background="@color/white"
+    tools:context=".FragmentsIphone.fragmente_iphone14plus">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewWIthImage"
+        android:id="@+id/recyclerviewProducts"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/produtos02_apenas_imagem" />
-
+        android:layout_height="match_parent"
+        tools:listitem="@layout/produtos02_apenas_imagem"/>
 </FrameLayout>

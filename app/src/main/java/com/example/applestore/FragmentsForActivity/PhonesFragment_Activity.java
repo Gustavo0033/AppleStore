@@ -3,6 +3,7 @@ package com.example.applestore.FragmentsForActivity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,8 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.applestore.Adapters.MyAdapterMac;
+import com.example.applestore.Adapters.MyAdapterPhones;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -33,7 +37,7 @@ public class PhonesFragment_Activity extends Fragment {
 
     // TODO: Rename and change types of parameters
     private String mParam1;
-    private String mParam2;
+    private int mParam2;
 
     public PhonesFragment_Activity() {
         // Required empty public constructor
@@ -44,15 +48,14 @@ public class PhonesFragment_Activity extends Fragment {
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment PhonesFragment_Activity.
      */
     // TODO: Rename and change types and number of parameters
-    public static PhonesFragment_Activity newInstance(String param1, String param2) {
+    public static PhonesFragment_Activity newInstance(String param1) {
         PhonesFragment_Activity fragment = new PhonesFragment_Activity();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -62,7 +65,7 @@ public class PhonesFragment_Activity extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam2 = getArguments().getInt(ARG_PARAM2);
         }
     }
 
@@ -72,6 +75,9 @@ public class PhonesFragment_Activity extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_phones__activity, container, false);
 
+
+
+
         buildListData();
         initRecyclerView(view);
         return view;
@@ -79,21 +85,31 @@ public class PhonesFragment_Activity extends Fragment {
 
     private void initRecyclerView(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewiPhones);
-        GridLayoutManager GridLayout = new GridLayoutManager(getActivity(), 2);
+        GridLayoutManager GridLayoutManager = new GridLayoutManager(getActivity(), 2);
 
-        recyclerView.setLayoutManager(GridLayout);
-        MyAdapterMac adapter = new MyAdapterMac(PhonesArrayList);
+        recyclerView.setLayoutManager(GridLayoutManager);
+        MyAdapterPhones adapter = new MyAdapterPhones(PhonesArrayList);
         recyclerView.setAdapter(adapter);
 
     }
 
     private void buildListData() {
+        PhonesArrayList.add(new MainList("iPhone 14",R.drawable.iphone_14));
+        PhonesArrayList.add(new MainList("iPhone 14 Plus",R.drawable.iphone_14plus));
         PhonesArrayList.add(new MainList("iPhone 14 PRO",R.drawable.iphone_14_pro));
-        PhonesArrayList.add(new MainList("iPhone 14",R.drawable.iphone_14_));
-        PhonesArrayList.add(new MainList("iPhone 13 PRO",R.drawable.iphone_14_promax));
+        PhonesArrayList.add(new MainList("iPhone 14 PRO MAX",R.drawable.iphone_14_promax));
+        PhonesArrayList.add(new MainList("iPhone 13 Mini",R.drawable.iphone13_mini));
         PhonesArrayList.add(new MainList("iPhone 13",R.drawable.iphone_13));
-        PhonesArrayList.add(new MainList("Macbook Air M1 pro 16 polegadas",R.drawable.macpro_16_pol));
+        PhonesArrayList.add(new MainList("iPhone 13 Pro",R.drawable.iphone13_pro));
+        PhonesArrayList.add(new MainList("iPhone 13 Pro Max",R.drawable.iphone13_promax));
+        PhonesArrayList.add(new MainList("iPhone 12 Mini",R.drawable.iphone12_mini));
+        PhonesArrayList.add(new MainList("iPhone 12",R.drawable.iphone12));
+        PhonesArrayList.add(new MainList("iPhone 12 Pro",R.drawable.banner_iplace_quick_filter_iphone_12_pro_cat));
+        PhonesArrayList.add(new MainList("iPhone 12 Pro Max",R.drawable.iphone12_promax));
+
 
 
     }
+
+
 }
