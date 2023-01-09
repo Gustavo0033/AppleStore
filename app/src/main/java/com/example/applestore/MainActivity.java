@@ -29,13 +29,14 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
+
+
+
+
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new TesteFragment());
-
-
-
-
 
         binding.bottomNavigation.setOnItemSelectedListener(item ->{
             switch (item.getItemId()){
@@ -75,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
     }
-
 
 
 
