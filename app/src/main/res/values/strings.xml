@@ -10,13 +10,18 @@
     <string name="Produto4">Nome do produto4</string>
     <string name="Produto5">Nome do produto5</string>
 
+<!-- Produtos -->
 
     <string name="AppleWatch">Apple Watch</string>
     <string name="Macbook">Macbook</string>
     <string name="iPhone">iPhone</string>
+    <string name="AirPods">Airpods</string>
+    <string name="iPad" translatable="false">iPad</string>
 
 
-    <string name="Phones">Phones</string>
+    <string name="Phones" translatable="false">Phones</string>
+    <string name="BemVindo">Bem-Vindo!</string>
+    <string name="More">More</string>
     <string name="Seja_bem_vindo">Seja bem vindo!</string>
 
 

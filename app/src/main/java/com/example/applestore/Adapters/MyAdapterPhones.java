@@ -24,7 +24,6 @@ public class MyAdapterPhones extends RecyclerView.Adapter<MyAdapterPhones.MyView
 
     public MyAdapterPhones(ArrayList<MainList> phonesArrayList) {
         PhonesArrayList = phonesArrayList;
-
     }
 
     @NonNull

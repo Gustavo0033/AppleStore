@@ -3,31 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/testeteste"
-    tools:context=".FragmentsForActivity.TesteFragment">
-
+    android:background="@color/white"
+    tools:context=".FragmentsMore.FragmentIPAD">
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/BemVindo"
-        android:textSize="24sp"
-        android:textColor="@color/black"
+        android:text="@string/iPad"
         android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         android:layout_gravity="center|top">
     </TextView>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewWIthImage"
+        android:id="@+id/fragmentIPAD"
         android:layout_width="match_parent"
-        android:layout_height="666dp"
+        android:layout_height="649dp"
         android:layout_gravity="bottom"
-        android:layout_marginTop="50dp"
-        tools:listitem="@layout/produtos02_apenas_imagem" />
-
-
-
-
+        tools:listitem="@layout/produtos" />
 </FrameLayout>
