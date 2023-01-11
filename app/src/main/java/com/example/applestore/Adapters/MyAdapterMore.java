@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.applestore.FragmentsMore.FragmentAirPods;
+import com.example.applestore.FragmentsMore.FragmentIMAC;
 import com.example.applestore.FragmentsMore.FragmentIPAD;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
@@ -54,8 +55,8 @@ public class MyAdapterMore extends RecyclerView.Adapter<MyAdapterMore.MyViewHold
                 }
                 else if (position ==2){ // CLICK DO iMAC
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                    FragmentAirPods FragmentAirPods  = new FragmentAirPods();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec02, FragmentAirPods).addToBackStack(null).commit();
+                    FragmentIMAC fragmentIMAC  = new FragmentIMAC();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec02, fragmentIMAC).addToBackStack(null).commit();
                 }
 
             }

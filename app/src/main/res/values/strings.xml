@@ -10,8 +10,8 @@
     <string name="Produto4">Nome do produto4</string>
     <string name="Produto5">Nome do produto5</string>
 
-<!-- Produtos -->
-
+    <!-- Produtos -->
+    <string name="iMac">iMac</string>
     <string name="AppleWatch">Apple Watch</string>
     <string name="Macbook">Macbook</string>
     <string name="iPhone">iPhone</string>
