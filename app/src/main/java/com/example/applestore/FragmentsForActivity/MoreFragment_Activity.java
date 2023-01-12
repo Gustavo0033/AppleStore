@@ -91,7 +91,7 @@ public class MoreFragment_Activity extends Fragment {
 
     private void buildListData() {
         MoreArrayList.add(new MainList("Airpods",R.drawable.airpods_home));
-        MoreArrayList.add(new MainList("iPad",R.drawable.ipad));
+        MoreArrayList.add(new MainList("iPad",R.drawable.ipads_home));
         MoreArrayList.add(new MainList("iMac",R.drawable.imaac));
         MoreArrayList.add(new MainList("Mac Studio",R.drawable.macstudio));
         MoreArrayList.add(new MainList("Mac Mini",R.drawable.macmini));
