@@ -1,22 +1,18 @@
 package com.example.applestore;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.applestore.Fragments.HomeFragment;
-import com.example.applestore.FragmentsForActivity.AppleWatchragment_Activity;
-import com.example.applestore.FragmentsForActivity.MacbookFragment_Activity;
-import com.example.applestore.FragmentsForActivity.MoreFragment_Activity;
-import com.example.applestore.FragmentsForActivity.PhonesFragment_Activity;
-import com.example.applestore.FragmentsForActivity.TesteFragment;
+import com.example.applestore.FragmentsHome.FragmentsForActivity.AppleWatchragment_Activity;
+import com.example.applestore.FragmentsHome.FragmentsForActivity.MacbookFragment_Activity;
+import com.example.applestore.FragmentsHome.FragmentsForActivity.MoreFragment_Activity;
+import com.example.applestore.FragmentsHome.FragmentsForActivity.PhonesFragment_Activity;
+import com.example.applestore.FragmentsHome.FragmentsForActivity.TesteFragment;
 import com.example.applestore.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

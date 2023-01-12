@@ -18,12 +18,12 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentIPAD#newInstance} factory method to
+ * Use the {@link MacStudio#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentIPAD extends Fragment {
+public class MacStudio extends Fragment {
 
-    private ArrayList<MainList> FragmentIPAD = new ArrayList<>();
+    private ArrayList<MainList>FragmentMacStudio = new ArrayList<>();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +34,7 @@ public class FragmentIPAD extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentIPAD() {
+    public MacStudio() {
         // Required empty public constructor
     }
 
@@ -44,11 +44,11 @@ public class FragmentIPAD extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentIPAD.
+     * @return A new instance of fragment FragmentMacStudio.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentIPAD newInstance(String param1, String param2) {
-        FragmentIPAD fragment = new FragmentIPAD();
+    public static MacStudio newInstance(String param1, String param2) {
+        MacStudio fragment = new MacStudio();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,7 +69,7 @@ public class FragmentIPAD extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_i_p_a_d, container, false);
+        View view = inflater.inflate(R.layout.fragment_mac_studio, container, false);
 
         initRecyclerView(view);
         buildInitalData();
@@ -78,26 +78,18 @@ public class FragmentIPAD extends Fragment {
 
     private void buildInitalData() {
 
-
-        FragmentIPAD.add(new MainList("iPad Air", R.drawable.ipad_air));
-        FragmentIPAD.add(new MainList("iPad Pro", R.drawable.ipad_pro));
-        FragmentIPAD.add(new MainList("iPad mini 6", R.drawable.ipad_mini_6));
-        FragmentIPAD.add(new MainList("iPad 9", R.drawable.ipad9));
-        FragmentIPAD.add(new MainList("iPad 10", R.drawable.ipad10));
-
-
-
+        FragmentMacStudio.add(new MainList("Mac Studio M1 Max", R.drawable.macstudio));
+        FragmentMacStudio.add(new MainList("Mac Studio M1 Ultra", R.drawable.macstudio));
     }
 
     private void initRecyclerView(View view) {
-
-        RecyclerView recyclerView = view.findViewById(R.id.fragmentIPAD);
+        RecyclerView recyclerView = view.findViewById(R.id.FragmentMacStudio);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
-
         recyclerView.setLayoutManager(gridLayoutManager);
-        AdapterWithText adapter = new AdapterWithText(FragmentIPAD);
+
+
+        AdapterWithText adapter = new AdapterWithText(FragmentMacStudio);
         recyclerView.setAdapter(adapter);
+
     }
-
-
 }

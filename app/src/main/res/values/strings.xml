@@ -34,5 +34,11 @@
     <!-- Modelos Apple Watch -->
     <string name="AppleWatch8">Apple Watch Series 8</string>
 
+    <!-- mac mini -->
+    <string name="MacMini">Mac mini</string>
+
+    <!-- Studio Display -->
+    <string name="StudioDisplay">Studio Display</string>
+
 
 </resources>

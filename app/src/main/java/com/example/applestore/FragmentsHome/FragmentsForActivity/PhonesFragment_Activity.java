@@ -1,20 +1,15 @@
-package com.example.applestore.FragmentsForActivity;
+package com.example.applestore.FragmentsHome.FragmentsForActivity;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.applestore.Adapters.MyAdapterMac;
 import com.example.applestore.Adapters.MyAdapterPhones;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;

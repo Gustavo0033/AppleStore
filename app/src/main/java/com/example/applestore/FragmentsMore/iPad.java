@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.applestore.Adapters.AdapterWithText;
-import com.example.applestore.Adapters.MyAdapterMore;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -20,12 +18,13 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentAirPods#newInstance} factory method to
+ * Use the {@link iPad#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentAirPods extends Fragment {
+public class iPad extends Fragment {
 
-    public ArrayList<MainList> FragmentAirPods = new ArrayList<>();
+    private ArrayList<MainList> FragmentIPAD = new ArrayList<>();
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,7 +34,7 @@ public class FragmentAirPods extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentAirPods() {
+    public iPad() {
         // Required empty public constructor
     }
 
@@ -45,11 +44,11 @@ public class FragmentAirPods extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentAirPods.
+     * @return A new instance of fragment FragmentIPAD.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentAirPods newInstance(String param1, String param2) {
-        FragmentAirPods fragment = new FragmentAirPods();
+    public static iPad newInstance(String param1, String param2) {
+        iPad fragment = new iPad();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -70,32 +69,35 @@ public class FragmentAirPods extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_air_pods, container, false);
+        View view = inflater.inflate(R.layout.fragment_i_p_a_d, container, false);
 
-        buildListData();
         initRecyclerView(view);
+        buildInitalData();
         return view;
+    }
+
+    private void buildInitalData() {
+
+
+        FragmentIPAD.add(new MainList("iPad Air", R.drawable.ipad_air));
+        FragmentIPAD.add(new MainList("iPad Pro", R.drawable.ipad_pro));
+        FragmentIPAD.add(new MainList("iPad mini 6", R.drawable.ipad_mini_6));
+        FragmentIPAD.add(new MainList("iPad 9", R.drawable.ipad9));
+        FragmentIPAD.add(new MainList("iPad 10", R.drawable.ipad10));
+
+
 
     }
 
     private void initRecyclerView(View view) {
 
-        RecyclerView recyclerView = view.findViewById(R.id.fragmentAirPodsssss);
-        GridLayoutManager GridLayout = new GridLayoutManager(getActivity(), 2);
+        RecyclerView recyclerView = view.findViewById(R.id.fragmentIPAD);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
 
-        recyclerView.setLayoutManager(GridLayout);
-        AdapterWithText adapter = new AdapterWithText(FragmentAirPods);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        AdapterWithText adapter = new AdapterWithText(FragmentIPAD);
         recyclerView.setAdapter(adapter);
     }
 
-    private void buildListData() {
 
-        FragmentAirPods.add(new MainList("Airpods 2° Geração",R.drawable.airpods_2geracao));
-        FragmentAirPods.add(new MainList("Airpods 3° Geração", R.drawable.airpods_3geracao));
-        FragmentAirPods.add(new MainList("Airpods Pro 2° Geração",R.drawable.airpods_pro2geracao));
-        FragmentAirPods.add(new MainList("Airpods Max", R.drawable.airpods_max));
-
-
-
-    }
 }

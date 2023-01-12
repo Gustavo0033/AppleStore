@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/applewatch_activity"
-    tools:context=".FragmentsForActivity.AppleWatchragment_Activity">
+    tools:context=".FragmentsHome.FragmentsForActivity.AppleWatchragment_Activity">
 
     <!-- TODO: Update blank fragment layout -->
 
