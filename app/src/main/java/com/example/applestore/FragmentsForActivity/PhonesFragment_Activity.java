@@ -94,8 +94,8 @@ public class PhonesFragment_Activity extends Fragment {
     }
 
     private void buildListData() {
-        PhonesArrayList.add(new MainList("iPhone 14",R.drawable.iphone_14));
         PhonesArrayList.add(new MainList("iPhone 14 Plus",R.drawable.iphone_14plus));
+        PhonesArrayList.add(new MainList("iPhone 14",R.drawable.iphone_14));
         PhonesArrayList.add(new MainList("iPhone 14 PRO",R.drawable.iphone_14_pro));
         PhonesArrayList.add(new MainList("iPhone 14 PRO MAX",R.drawable.iphone_14_promax));
         PhonesArrayList.add(new MainList("iPhone 13 Mini",R.drawable.iphone13_mini));

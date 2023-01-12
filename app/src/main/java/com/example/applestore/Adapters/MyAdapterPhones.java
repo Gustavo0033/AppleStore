@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentsIphone.fragment_iphone14;
 import com.example.applestore.FragmentsIphone.fragmente_iphone14plus;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
@@ -23,7 +24,6 @@ public class MyAdapterPhones extends RecyclerView.Adapter<MyAdapterPhones.MyView
 
     public MyAdapterPhones(ArrayList<MainList> phonesArrayList) {
         PhonesArrayList = phonesArrayList;
-
     }
 
     @NonNull
@@ -51,15 +51,9 @@ public class MyAdapterPhones extends RecyclerView.Adapter<MyAdapterPhones.MyView
             }
                 else if(position==1){
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                    fragmente_iphone14plus fragmenteiphone14plus = new fragmente_iphone14plus();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragmenteiphone14plus).addToBackStack(null).commit();
+                    fragment_iphone14 fragment_iphone14 = new fragment_iphone14();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragment_iphone14).addToBackStack(null).commit();
                 }
-                else if(position==2){
-                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                    fragmente_iphone14plus fragmenteiphone14plus = new fragmente_iphone14plus();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragmenteiphone14plus).addToBackStack(null).commit();
-                }
-
             }
         });
 

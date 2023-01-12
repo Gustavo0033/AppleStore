@@ -6,10 +6,23 @@
     tools:context=".FragmentsForActivity.MacbookFragment_Activity">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Macbook"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textAlignment="center">
+    </TextView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMac"
         android:layout_width="match_parent"
-        android:layout_height="716dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="50dp"
         tools:listitem="@layout/produtos" />
 
 </FrameLayout>

@@ -7,8 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentsMore.FragmentAirPods;
 import com.example.applestore.List.ListForImage;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;

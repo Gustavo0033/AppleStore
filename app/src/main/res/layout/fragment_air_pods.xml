@@ -3,29 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentsForActivity.AppleWatchragment_Activity">
+    android:background="@color/white"
+    tools:context=".FragmentsMore.FragmentAirPods">
 
     <!-- TODO: Update blank fragment layout -->
-
-
-
-
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="italic"
-        android:textAlignment="center"
+        android:text="@string/AirPods"
         android:layout_gravity="center|top"
-        android:text="@string/AppleWatch"
+        android:textStyle="italic"
         android:textColor="@color/black"
         android:textSize="24sp">
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewAppleWatch"
+        android:id="@+id/fragmentAirPodsssss"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_height="680dp"
+        android:layout_gravity="bottom"
         tools:listitem="@layout/produtos" />
-
 </FrameLayout>

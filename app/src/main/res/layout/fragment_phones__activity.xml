@@ -9,18 +9,21 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="94dp"
-        android:src="@drawable/icon_iphone">
-    </ImageView>
-
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:text="@string/iPhone">
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewiPhones"
         android:layout_width="match_parent"
-        android:layout_height="637dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="671dp"
+        android:layout_marginTop="50dp"
         tools:listitem="@layout/produtos" />
 
 </FrameLayout>

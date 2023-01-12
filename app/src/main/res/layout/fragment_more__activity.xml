@@ -3,15 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/rec02"
     tools:context=".FragmentsForActivity.MoreFragment_Activity">
 
     <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/More"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_gravity="center|top">
+    </TextView>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMore"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/horizontal_nameproducts"/>
+        android:layout_height="689dp"
+        android:layout_gravity="bottom"
+        tools:listitem="@layout/produtos" />
 
 </FrameLayout>
