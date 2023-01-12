@@ -7,8 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentAppleWatch.FragmentAppleWatchUltra;
+import com.example.applestore.FragmentsIphone.fragment_iphone14;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -33,6 +36,18 @@ public class MyAdapterAW extends RecyclerView.Adapter<MyAdapterAW.MyViewHolderAW
     public void onBindViewHolder(@NonNull MyViewHolderAW holder, int position) {
         holder.imageProduct.setImageResource(AppleWatchArrayList.get(position).getImageProduct());
         holder.TextProduct.setText(AppleWatchArrayList.get(position).getTextProduct());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (position==0){
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    FragmentAppleWatchUltra fragmentAppleWatchUltra  = new FragmentAppleWatchUltra();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.applewatch_activity, fragmentAppleWatchUltra).addToBackStack(null).commit();
+
+                }
+            }
+        });
 
 
     }

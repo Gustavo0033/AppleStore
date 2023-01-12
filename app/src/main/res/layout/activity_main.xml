@@ -10,28 +10,26 @@
     <LinearLayout
         android:id="@+id/frame_container"
         android:layout_width="411dp"
-        android:layout_height="673dp"
+        android:layout_height="849dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias=".0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.010">
-
-
+        app:layout_constraintVertical_bias="0.02">
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/frame_layout"
-        android:layout_width="408dp"
-        android:layout_height="740dp"
+        android:layout_width="412dp"
+        android:layout_height="845dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.620">
+        app:layout_constraintVertical_bias="0.020">
 
 
     </FrameLayout>
@@ -43,7 +41,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:menu="@menu/bottom_nav_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

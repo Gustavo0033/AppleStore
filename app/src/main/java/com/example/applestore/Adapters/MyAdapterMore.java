@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.applestore.FragmentsMore.FragmentAirPods;
 import com.example.applestore.FragmentsMore.FragmentIMAC;
 import com.example.applestore.FragmentsMore.FragmentIPAD;
+import com.example.applestore.FragmentsMore.FragmentMacStudio;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -57,6 +58,12 @@ public class MyAdapterMore extends RecyclerView.Adapter<MyAdapterMore.MyViewHold
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
                     FragmentIMAC fragmentIMAC  = new FragmentIMAC();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec02, fragmentIMAC).addToBackStack(null).commit();
+                }
+                else if (position ==3){ // CLICK DO MACSTUDIO
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    FragmentMacStudio fragmentMacStudio  = new FragmentMacStudio();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec02, fragmentMacStudio).addToBackStack(null).commit();
+
                 }
 
             }

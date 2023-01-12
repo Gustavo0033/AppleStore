@@ -3,13 +3,18 @@ package com.example.applestore.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentAppleWatch.FragmentAppleWatch8;
+import com.example.applestore.FragmentAppleWatch.FragmentAppleWatchUltra;
+import com.example.applestore.FragmentsHome.FragmentHome;
+import com.example.applestore.FragmentsIphone.fragment_iphone14;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -40,6 +45,29 @@ public class MyAdapterMain extends RecyclerView.Adapter<MyAdapterMain.MyViewHold
       holder.TextProduct.setText(MainArrayListHome.get(position).getTextProduct());
 
 
+      holder.itemView.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              if (position == 0){ //CLICK DO iphone 14
+                  AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                  fragment_iphone14 fragment_iphone14  = new fragment_iphone14();
+                  activity.getSupportFragmentManager().beginTransaction().replace(R.id.testeteste, fragment_iphone14).addToBackStack(null).commit();
+              }
+              else if(position ==1){ // CLICK NO IPHONE 14 PRO
+                  AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                  fragment_iphone14 fragment_iphone14  = new fragment_iphone14();
+                  activity.getSupportFragmentManager().beginTransaction().replace(R.id.testeteste, fragment_iphone14).addToBackStack(null).commit();
+
+              }else if(position ==2){ // CLICK NO applewatch
+                  AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                  FragmentAppleWatch8 fragmentAppleWatch8  = new FragmentAppleWatch8();
+                  activity.getSupportFragmentManager().beginTransaction().replace(R.id.testeteste, fragmentAppleWatch8).addToBackStack(null).commit();
+              }
+
+          }
+      });
+
+
 
 
 
@@ -54,6 +82,7 @@ public class MyAdapterMain extends RecyclerView.Adapter<MyAdapterMain.MyViewHold
 
         ImageView imageProduct;
         TextView TextProduct;
+
 
 
         public MyViewHolderMain(@NonNull View itemView) {

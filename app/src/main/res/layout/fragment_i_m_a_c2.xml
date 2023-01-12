@@ -23,7 +23,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/FragmentIMAC"
         android:layout_width="match_parent"
-        android:layout_height="645dp"
-        android:layout_gravity="bottom"
+        android:layout_height="744dp"
+        android:layout_marginTop="40sp"
         tools:listitem="@layout/produtos" />
 </FrameLayout>

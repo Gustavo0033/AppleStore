@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/applewatch_activity"
     tools:context=".FragmentsForActivity.AppleWatchragment_Activity">
 
     <!-- TODO: Update blank fragment layout -->
@@ -24,7 +25,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAppleWatch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="719dp"
         android:layout_marginTop="50dp"
         tools:listitem="@layout/produtos" />
 

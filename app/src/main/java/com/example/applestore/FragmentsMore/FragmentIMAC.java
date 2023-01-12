@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -78,21 +79,25 @@ public class FragmentIMAC extends Fragment {
 
     private void initRecyclerView(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.FragmentIMAC);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
 
-        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setLayoutManager(linearLayoutManager);
         AdapterWithText adapter = new AdapterWithText(FragmentImac);
         recyclerView.setAdapter(adapter);
     }
 
     private void buildInitialData() {
 
-        FragmentImac.add(new MainList("iMac", R.drawable.imac_24pol));
-        FragmentImac.add(new MainList("iMac", R.drawable.imac_24pol));
-        FragmentImac.add(new MainList("iMac", R.drawable.imac_24pol));
-        FragmentImac.add(new MainList("iMac", R.drawable.imac_24pol));
-        FragmentImac.add(new MainList("iMac", R.drawable.imac_24pol));
-        FragmentImac.add(new MainList("iMac", R.drawable.imac_24pol));
+        FragmentImac.add(new MainList("iMac 2021 24 Polegadas", R.drawable.imac_24pol_m1));
+        FragmentImac.add(new MainList("iMac 2021 24 Polegadas", R.drawable.imac_24pol_m1_segundo));
+        FragmentImac.add(new MainList("iMac 2020 27 Polegadas", R.drawable.imac_2020));
+        FragmentImac.add(new MainList("iMac 2019 27 Polegadas", R.drawable.imac_2019_27pol));
+        FragmentImac.add(new MainList("iMac 2019 21,5 Polegadas", R.drawable.imac_2019_21_5pol));
+        FragmentImac.add(new MainList("iMac Pro 2017", R.drawable.mac_pro_2017));
+        FragmentImac.add(new MainList("iMac 2017 27 Polegadas", R.drawable.imac_2017));
+        FragmentImac.add(new MainList("iMac 2017 21,5 Polegadas", R.drawable.imac_2017_21_5));
+        FragmentImac.add(new MainList("iMac 2015 27 Polegadas", R.drawable.imac_2015_27pol));
+        FragmentImac.add(new MainList("iMac 2015 21,5 Polegadas", R.drawable.imac_2015_21_5));
 
 
     }

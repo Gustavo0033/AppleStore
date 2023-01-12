@@ -1,32 +1,29 @@
-package com.example.applestore.FragmentsForActivity;
+package com.example.applestore.FragmentAppleWatch;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
-import com.example.applestore.Adapters.MyAdapterMain;
-import com.example.applestore.List.ListForImage;
+import com.example.applestore.Adapters.AdapterWithText;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link TesteFragment#newInstance} factory method to
+ * Use the {@link FragmentAppleWatchUltra#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TesteFragment extends Fragment {
-    private ArrayList<MainList> MainArrayListHome = new ArrayList<>();
-
+public class FragmentAppleWatchUltra extends Fragment {
+    private ArrayList<MainList> FragmentAppleWatchUltra = new ArrayList<>();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,7 +34,7 @@ public class TesteFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public TesteFragment() {
+    public FragmentAppleWatchUltra() {
         // Required empty public constructor
     }
 
@@ -47,11 +44,11 @@ public class TesteFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TesteFragment.
+     * @return A new instance of fragment FragmentAppleWatchUltra.
      */
     // TODO: Rename and change types and number of parameters
-    public static TesteFragment newInstance(String param1, String param2) {
-        TesteFragment fragment = new TesteFragment();
+    public static FragmentAppleWatchUltra newInstance(String param1, String param2) {
+        FragmentAppleWatchUltra fragment = new FragmentAppleWatchUltra();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -72,28 +69,26 @@ public class TesteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_teste, container, false);
-        buildListData();
+        View view = inflater.inflate(R.layout.fragment_apple_watch_ultra, container, false);
+
         initRecyclerView(view);
-        return view;
+        buildInitialData();
+        return  view;
+    }
+
+
+    private void buildInitialData() {
+        FragmentAppleWatchUltra.add(new MainList("Apple Watch", R.drawable.applewatch_ultra));
+
     }
 
     private void initRecyclerView(View view) {
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewWIthImage);
-        LinearLayoutManager LinearLayout = new LinearLayoutManager(getActivity());
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerviewAWUltra);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(linearLayoutManager);
 
-        recyclerView.setLayoutManager(LinearLayout);
-        MyAdapterMain adapter = new MyAdapterMain(MainArrayListHome);
+        AdapterWithText adapter = new AdapterWithText(FragmentAppleWatchUltra);
         recyclerView.setAdapter(adapter);
     }
-
-    private void buildListData() {
-        MainArrayListHome.add((new MainList("iPhone 14 Grande e grandão", R.drawable.image_home_iphone14)));
-        MainArrayListHome.add((new MainList("iphone 14 Pro Pro. E além.", R.drawable.iphone_14_pro_overview__e414c54gtu6a_og)));
-        MainArrayListHome.add((new MainList("Watch Series 8", R.drawable.apple_watch_series8)));
-        MainArrayListHome.add((new MainList("iPads", R.drawable.ipads_home)));
-
-    }
-
 }
