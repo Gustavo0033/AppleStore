@@ -1,4 +1,4 @@
-package com.example.applestore.FragmentsHome.FragmentsForActivity;
+package com.example.applestore.FragmentsForActivity;
 
 import android.os.Bundle;
 
@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.applestore.Adapters.MyAdapterMore;
+import com.example.applestore.Adapters.MyAdapterMain;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -18,11 +18,11 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MoreFragment_Activity#newInstance} factory method to
+ * Use the {@link TesteFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MoreFragment_Activity extends Fragment {
-    private ArrayList<MainList> MoreArrayList = new ArrayList<>();
+public class TesteFragment extends Fragment {
+    private ArrayList<MainList> MainArrayListHome = new ArrayList<>();
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -34,7 +34,7 @@ public class MoreFragment_Activity extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MoreFragment_Activity() {
+    public TesteFragment() {
         // Required empty public constructor
     }
 
@@ -44,11 +44,11 @@ public class MoreFragment_Activity extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MoreFragment_Activity.
+     * @return A new instance of fragment TesteFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MoreFragment_Activity newInstance(String param1, String param2) {
-        MoreFragment_Activity fragment = new MoreFragment_Activity();
+    public static TesteFragment newInstance(String param1, String param2) {
+        TesteFragment fragment = new TesteFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,9 +69,7 @@ public class MoreFragment_Activity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View view = inflater.inflate(R.layout.fragment_more__activity, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_teste, container, false);
         buildListData();
         initRecyclerView(view);
         return view;
@@ -79,23 +77,20 @@ public class MoreFragment_Activity extends Fragment {
 
     private void initRecyclerView(View view) {
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewMore);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewWIthImage);
         LinearLayoutManager LinearLayout = new LinearLayoutManager(getActivity());
 
         recyclerView.setLayoutManager(LinearLayout);
-        MyAdapterMore adapter = new MyAdapterMore(MoreArrayList);
+        MyAdapterMain adapter = new MyAdapterMain(MainArrayListHome);
         recyclerView.setAdapter(adapter);
     }
 
     private void buildListData() {
-        MoreArrayList.add(new MainList("Airpods",R.drawable.airpods_home));
-        MoreArrayList.add(new MainList("iPad",R.drawable.ipads_home));
-        MoreArrayList.add(new MainList("iMac",R.drawable.imaac));
-        MoreArrayList.add(new MainList("Mac Studio",R.drawable.macstudio));
-        MoreArrayList.add(new MainList("Mac Mini",R.drawable.macmini));
-        MoreArrayList.add(new MainList("Studio Display",R.drawable.studiodisplay));
-        MoreArrayList.add(new MainList("Acessórios",R.drawable.acessorios));
-
+        MainArrayListHome.add((new MainList("iPhone 14 Grande e grandão", R.drawable.image_home_iphone14)));
+        MainArrayListHome.add((new MainList("iphone 14 Pro Pro. E além.", R.drawable.iphone_14_pro_overview__e414c54gtu6a_og)));
+        MainArrayListHome.add((new MainList("Watch Series 8", R.drawable.apple_watch_series8)));
+        MainArrayListHome.add((new MainList("iPads", R.drawable.ipads_home)));
 
     }
+
 }

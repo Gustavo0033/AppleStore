@@ -1,4 +1,4 @@
-package com.example.applestore.FragmentsHome.FragmentsForActivity;
+package com.example.applestore.FragmentsForActivity;
 
 import android.os.Bundle;
 

@@ -15,6 +15,7 @@ import com.example.applestore.FragmentAppleWatch.FragmentAppleWatch8;
 import com.example.applestore.FragmentAppleWatch.FragmentAppleWatchUltra;
 import com.example.applestore.FragmentsHome.FragmentHome;
 import com.example.applestore.FragmentsIphone.fragment_iphone14;
+import com.example.applestore.FragmentsMore.iPad;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -62,7 +63,13 @@ public class MyAdapterMain extends RecyclerView.Adapter<MyAdapterMain.MyViewHold
                   AppCompatActivity activity = (AppCompatActivity) view.getContext();
                   FragmentAppleWatch8 fragmentAppleWatch8  = new FragmentAppleWatch8();
                   activity.getSupportFragmentManager().beginTransaction().replace(R.id.testeteste, fragmentAppleWatch8).addToBackStack(null).commit();
-              }
+
+              }else if(position ==3){ // CLICK NO iPad
+              AppCompatActivity activity = (AppCompatActivity) view.getContext();
+              iPad iPad  = new iPad();
+              activity.getSupportFragmentManager().beginTransaction().replace(R.id.testeteste, iPad).addToBackStack(null).commit();
+          }
+
 
           }
       });
