@@ -15,13 +15,16 @@ import com.example.applestore.List.ListForImage;
 import com.example.applestore.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment_iphone14#newInstance} factory method to
+ * Use the {@link fragment_iphone14Pro#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_iphone14 extends Fragment {
+public class fragment_iphone14Pro extends Fragment {
+
+
 
     private ArrayList<ListForImage> FragmenteIphone = new ArrayList<>();
     // TODO: Rename parameter arguments, choose names that match
@@ -33,7 +36,7 @@ public class fragment_iphone14 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public fragment_iphone14() {
+    public fragment_iphone14Pro() {
         // Required empty public constructor
     }
 
@@ -46,8 +49,8 @@ public class fragment_iphone14 extends Fragment {
      * @return A new instance of fragment fragmen_iphone14.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_iphone14 newInstance(String param1, String param2) {
-        fragment_iphone14 fragment = new fragment_iphone14();
+    public static fragment_iphone14Pro newInstance(String param1, String param2) {
+        fragment_iphone14Pro fragment = new fragment_iphone14Pro();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

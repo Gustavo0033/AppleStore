@@ -15,7 +15,7 @@
         android:text="@string/BemVindo"
         android:textSize="24sp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/black"
+        android:textColor="?android:textColorPrimary"
         android:textStyle="italic"
         android:layout_gravity="center|top">
     </TextView>

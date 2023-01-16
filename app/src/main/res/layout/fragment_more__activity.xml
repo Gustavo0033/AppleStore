@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/More"
         android:textSize="24sp"
-        android:textColor="@color/black"
+        android:textColor="?android:textColorPrimary"
         android:textStyle="italic"
         android:layout_gravity="center|top">
     </TextView>

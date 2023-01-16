@@ -3,24 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".FragmentsMore.AirPods">
+    android:background="@drawable/walapaper_iphone14"
+    tools:context=".FragmentsIphone.Fragment_iphone14">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/AirPods"
+        android:textSize="39sp"
+        android:text="@string/iPhone14"
+        android:textColor="@color/OrangeIphone14"
         android:layout_gravity="center|top"
-        android:textStyle="italic"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="24sp">
+        android:layout_marginTop="15dp">
     </TextView>
 
+
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragmentAirPodsssss"
+        android:id="@+id/recyclerview_iphone14"
         android:layout_width="match_parent"
-        android:layout_height="749dp"
-        android:layout_marginTop="40dp"
-        tools:listitem="@layout/produtos" />
+         android:layout_marginTop="70sp"
+        android:layout_height="283dp" />
 </FrameLayout>

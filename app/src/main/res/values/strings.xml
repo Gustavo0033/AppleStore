@@ -27,7 +27,8 @@
 
 
     <!-- Modelos iPhone -->
-    <string name="iPhone14">iPhone14</string>
+    <string name="iPhone14_number">14</string>
+    <string name="iPhone14">iPhone 14</string>
     <string name="iPhone14PRO">iPhone 14 Pro</string>
 
 
