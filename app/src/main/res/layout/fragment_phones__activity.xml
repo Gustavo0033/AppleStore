@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rec"
-    tools:context=".FragmentsHome.FragmentsForActivity.PhonesFragment_Activity">
+    tools:context=".FragmentsForActivity.PhonesFragment_Activity">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textStyle="italic"
-        android:textColor="@color/black"
+        android:textColor="?android:textColorPrimary"
         android:textSize="24sp"
         android:text="@string/iPhone">
     </TextView>

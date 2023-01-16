@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.applestore.FragmentAppleWatch.FragmentAppleWatchUltra;
-import com.example.applestore.FragmentsIphone.fragment_iphone14;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 

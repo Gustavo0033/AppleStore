@@ -10,7 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.applestore.FragmentsIphone.fragment_iphone14;
+import com.example.applestore.FragmentsIphone.Fragment_iphone14;
+import com.example.applestore.FragmentsIphone.fragment_iphone14Pro;
 import com.example.applestore.FragmentsIphone.fragmente_iphone14plus;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
@@ -49,9 +50,14 @@ public class MyAdapterPhones extends RecyclerView.Adapter<MyAdapterPhones.MyView
                 fragmente_iphone14plus fragmenteiphone14plus = new fragmente_iphone14plus();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragmenteiphone14plus).addToBackStack(null).commit();
             }
-                else if(position==1){
+                else if(position==1){ // iphone 14
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                    fragment_iphone14 fragment_iphone14 = new fragment_iphone14();
+                    Fragment_iphone14 fragment_iphone14 = new Fragment_iphone14();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragment_iphone14).addToBackStack(null).commit();
+                }
+                else if(position ==2){ //iphone14_pro
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    fragment_iphone14Pro fragment_iphone14 = new fragment_iphone14Pro();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, fragment_iphone14).addToBackStack(null).commit();
                 }
             }

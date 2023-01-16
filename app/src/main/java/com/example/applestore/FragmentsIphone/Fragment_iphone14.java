@@ -1,4 +1,4 @@
-package com.example.applestore.FragmentsHome.FragmentsForActivity;
+package com.example.applestore.FragmentsIphone;
 
 import android.os.Bundle;
 
@@ -10,20 +10,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.applestore.Adapters.MyAdapterMain;
-import com.example.applestore.List.MainList;
+import com.example.applestore.Adapters.AdaptersForProducts;
+import com.example.applestore.List.ListForImage;
 import com.example.applestore.R;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link TesteFragment#newInstance} factory method to
+ * Use the {@link Fragment_iphone14#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TesteFragment extends Fragment {
-    private ArrayList<MainList> MainArrayListHome = new ArrayList<>();
+public class Fragment_iphone14 extends Fragment {
 
+    private ArrayList<ListForImage> Fragment_iphone14 = new ArrayList<>();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +34,7 @@ public class TesteFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public TesteFragment() {
+    public Fragment_iphone14() {
         // Required empty public constructor
     }
 
@@ -44,11 +44,11 @@ public class TesteFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TesteFragment.
+     * @return A new instance of fragment Fragment_iphone14.
      */
     // TODO: Rename and change types and number of parameters
-    public static TesteFragment newInstance(String param1, String param2) {
-        TesteFragment fragment = new TesteFragment();
+    public static Fragment_iphone14 newInstance(String param1, String param2) {
+        Fragment_iphone14 fragment = new Fragment_iphone14();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,28 +69,33 @@ public class TesteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_teste, container, false);
-        buildListData();
+        View view = inflater.inflate(R.layout.fragment_iphone14, container, false);
+
+
         initRecyclerView(view);
+        buildInitialData();
         return view;
+    }
+
+    private void buildInitialData() {
+
+        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
+        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
+        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
+        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
+        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
+
+
     }
 
     private void initRecyclerView(View view) {
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewWIthImage);
-        LinearLayoutManager LinearLayout = new LinearLayoutManager(getActivity());
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerview_iphone14);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
 
-        recyclerView.setLayoutManager(LinearLayout);
-        MyAdapterMain adapter = new MyAdapterMain(MainArrayListHome);
-        recyclerView.setAdapter(adapter);
-    }
-
-    private void buildListData() {
-        MainArrayListHome.add((new MainList("iPhone 14 Grande e grandão", R.drawable.image_home_iphone14)));
-        MainArrayListHome.add((new MainList("iphone 14 Pro Pro. E além.", R.drawable.iphone_14_pro_overview__e414c54gtu6a_og)));
-        MainArrayListHome.add((new MainList("Watch Series 8", R.drawable.apple_watch_series8)));
-        MainArrayListHome.add((new MainList("iPads", R.drawable.ipads_home)));
+        AdaptersForProducts adaptersForProducts = new AdaptersForProducts(Fragment_iphone14);
+        recyclerView.setAdapter(adaptersForProducts);
 
     }
-
 }

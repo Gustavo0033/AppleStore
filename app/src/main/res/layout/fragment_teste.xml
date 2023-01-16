@@ -5,22 +5,17 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/testeteste"
-    tools:context=".FragmentsHome.FragmentsForActivity.TesteFragment">
+    tools:context=".FragmentsForActivity.TesteFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-    <ImageView
-        android:layout_width="44dp"
-        android:layout_height="31dp"
-        android:layout_gravity="center|top|left"
-        android:src="@drawable/apple_logo_black_svg"></ImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/BemVindo"
         android:textSize="24sp"
-        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textColor="?android:textColorPrimary"
         android:textStyle="italic"
         android:layout_gravity="center|top">
     </TextView>
@@ -29,7 +24,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewWIthImage"
         android:layout_width="match_parent"
-        android:layout_height="666dp"
+        android:layout_height="650dp"
         android:layout_marginTop="70dp"
         tools:listitem="@layout/produtos02_apenas_imagem" />
 
