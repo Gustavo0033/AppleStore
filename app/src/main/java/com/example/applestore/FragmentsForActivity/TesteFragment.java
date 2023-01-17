@@ -89,7 +89,7 @@ public class TesteFragment extends Fragment {
         MainArrayListHome.add((new MainList("iPhone 14 Grande e grandão", R.drawable._4iphone_phh)));
         MainArrayListHome.add((new MainList("iphone 14 Pro Pro. E além.", R.drawable.iphone14_pro_ph)));
         MainArrayListHome.add((new MainList("Watch Series 8", R.drawable.aw_series8_ph)));
-        MainArrayListHome.add((new MainList("iPads", R.drawable.ipads_home)));
+        MainArrayListHome.add((new MainList("iPads", R.drawable.ipads_home_ph)));
 
     }
 

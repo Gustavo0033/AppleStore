@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.applestore.FragmentMacbook.Fragment_MacbookAIR;
+import com.example.applestore.FragmentMacbook.Fragment_MacbookProM1;
+import com.example.applestore.FragmentMacbook.Fragment_Macbook_airm2;
 import com.example.applestore.FragmentsIphone.fragmente_iphone14plus;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
@@ -47,6 +49,14 @@ public class MyAdapterMac extends RecyclerView.Adapter<MyAdapterMac.MyViewHolder
                     AppCompatActivity activity = (AppCompatActivity) v.getContext();
                     Fragment_MacbookAIR fragment_macbookAIR = new Fragment_MacbookAIR();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.macbook, fragment_macbookAIR).addToBackStack(null).commit();
+                }else if(position ==1){
+                        AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                        Fragment_Macbook_airm2 fragment_macbook_airm2 = new Fragment_Macbook_airm2();
+                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.macbook, fragment_macbook_airm2).addToBackStack(null).commit();
+                } else if(position ==2){
+                    AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                    Fragment_MacbookProM1 fragment_macbookProM1 = new Fragment_MacbookProM1();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.macbook, fragment_macbookProM1).addToBackStack(null).commit();
                 }
             }
         });

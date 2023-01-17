@@ -87,7 +87,7 @@ public class MacbookFragment_Activity extends Fragment {
 
     private void buildListData() {
         MacArrayList.add(new MainList("Macbook Air M1",R.drawable.macbook_air_m1_ph));
-        MacArrayList.add(new MainList("Macbook Air M2",R.drawable.macbook_air_m2_ph));
+        MacArrayList.add(new MainList("Macbook Air M2",R.drawable.macbook_air_m2_ph ));
         MacArrayList.add(new MainList("Macbook Pro M1 PRO 13 polegadas",R.drawable.mac_pro_13pol));
         MacArrayList.add(new MainList("Macbook Air M1 pro 14 polegadas",R.drawable.macpro_14pol));
         MacArrayList.add(new MainList("Macbook Air M1 pro 16 polegadas",R.drawable.macpro_16_pol));

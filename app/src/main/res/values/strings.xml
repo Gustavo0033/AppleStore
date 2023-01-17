@@ -41,5 +41,12 @@
     <!-- Studio Display -->
     <string name="StudioDisplay">Studio Display</string>
 
+    <!-- macbooks -->
+    <string name="MacbookProM1">Macbook Pro M1</string>
+    <string name="MacbookProM2">Macbook Pro M2</string>
+
+    <string name="MacbookAirM1">Macbook Air M1</string>
+    <string name="MacbookAirM2">Macbook Air M2</string>
+
 
 </resources>
