@@ -18,12 +18,12 @@
 
     </TextView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/iphone14"
-            android:layout_width="match_parent"
-            android:layout_height="268dp"
-            android:layout_marginTop="70dp"
-            tools:listitem="@layout/produtos02_apenas_imagem" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/iphone14"
+        android:layout_width="match_parent"
+        android:layout_height="355dp"
+        android:layout_marginTop="70dp"
+        tools:listitem="@layout/produtos02_apenas_imagem" />
 
 
 

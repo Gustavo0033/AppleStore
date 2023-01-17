@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentAppleWatch.FragmentAppleWatch8;
 import com.example.applestore.FragmentAppleWatch.FragmentAppleWatchUltra;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
@@ -43,7 +44,10 @@ public class MyAdapterAW extends RecyclerView.Adapter<MyAdapterAW.MyViewHolderAW
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
                     FragmentAppleWatchUltra fragmentAppleWatchUltra  = new FragmentAppleWatchUltra();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.applewatch_activity, fragmentAppleWatchUltra).addToBackStack(null).commit();
-
+                }else if (position ==1){
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    FragmentAppleWatch8 fragmentAppleWatch8  = new FragmentAppleWatch8();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.applewatch_activity, fragmentAppleWatch8).addToBackStack(null).commit();
                 }
             }
         });

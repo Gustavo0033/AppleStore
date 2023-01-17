@@ -87,7 +87,7 @@ public class AppleWatchragment_Activity extends Fragment {
 
     private void buildListData() {
         AppleWatchArrayList.add(new MainList("Apple Watch Ultra",R.drawable.applewatch_ultra));
-        AppleWatchArrayList.add(new MainList("Apple Watch Series 8",R.drawable.applewatch_series8));
+        AppleWatchArrayList.add(new MainList("Apple Watch Series 8",R.drawable.aw_series8_ph));
         AppleWatchArrayList.add(new MainList("Apple Watch SE",R.drawable.applewatchse));
         AppleWatchArrayList.add(new MainList("Apple Watch Series 7",R.drawable.applewatch_series7));
         AppleWatchArrayList.add(new MainList("Apple Watch Series 6",R.drawable.applewatch6));

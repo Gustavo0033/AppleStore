@@ -86,9 +86,9 @@ public class TesteFragment extends Fragment {
     }
 
     private void buildListData() {
-        MainArrayListHome.add((new MainList("iPhone 14 Grande e grandão", R.drawable.image_home_iphone14)));
-        MainArrayListHome.add((new MainList("iphone 14 Pro Pro. E além.", R.drawable.iphone_14_pro_overview__e414c54gtu6a_og)));
-        MainArrayListHome.add((new MainList("Watch Series 8", R.drawable.apple_watch_series8)));
+        MainArrayListHome.add((new MainList("iPhone 14 Grande e grandão", R.drawable._4iphone_phh)));
+        MainArrayListHome.add((new MainList("iphone 14 Pro Pro. E além.", R.drawable.iphone14_pro_ph)));
+        MainArrayListHome.add((new MainList("Watch Series 8", R.drawable.aw_series8_ph)));
         MainArrayListHome.add((new MainList("iPads", R.drawable.ipads_home)));
 
     }

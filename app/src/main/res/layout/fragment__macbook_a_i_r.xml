@@ -3,11 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/maxbook_air_m1"
     tools:context=".FragmentMacbook.Fragment_MacbookAIR">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Macbook"
+        android:textColor="@color/white"
+        android:textSize="39sp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20sp">
+    </TextView>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewMAC"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/produtos02_apenas_imagem"
-        />
+        android:layout_height="440dp"
+        android:layout_marginTop="70dp"
+        tools:listitem="@layout/produtos02_apenas_imagem" />
 </FrameLayout>

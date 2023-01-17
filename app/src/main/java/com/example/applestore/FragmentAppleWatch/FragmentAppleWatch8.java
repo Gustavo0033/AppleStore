@@ -91,11 +91,11 @@ public class FragmentAppleWatch8 extends Fragment {
 
     private void buildInitalData() {
 
-        FragmentAW8.add(new ListForImage(R.drawable.apple_watch_series8));
-        FragmentAW8.add(new ListForImage(R.drawable.seires8_redd));
-        FragmentAW8.add(new ListForImage(R.drawable.apple_watch_series8));
-        FragmentAW8.add(new ListForImage(R.drawable.apple_watch_series8));
-        FragmentAW8.add(new ListForImage(R.drawable.apple_watch_series8));
+        FragmentAW8.add(new ListForImage(R.drawable.aw_series8_ph));
+        FragmentAW8.add(new ListForImage(R.drawable.aw_series8_zoom));
+        FragmentAW8.add(new ListForImage(R.drawable.aw_group_ph));
+        FragmentAW8.add(new ListForImage(R.drawable.aw_double_ph));
+
 
 
     }

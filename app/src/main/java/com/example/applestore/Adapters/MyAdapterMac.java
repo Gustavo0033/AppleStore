@@ -7,8 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentMacbook.Fragment_MacbookAIR;
+import com.example.applestore.FragmentsIphone.fragmente_iphone14plus;
 import com.example.applestore.List.MainList;
 import com.example.applestore.R;
 
@@ -36,6 +39,17 @@ public class MyAdapterMac extends RecyclerView.Adapter<MyAdapterMac.MyViewHolder
 
         holder.imageProduct.setImageResource(MacArrayList.get(position).getImageProduct());
         holder.TextProduct.setText(MacArrayList.get(position).getTextProduct());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (position ==0) {  //FAZER PARA O IPHONE 14 AGORA
+                    AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                    Fragment_MacbookAIR fragment_macbookAIR = new Fragment_MacbookAIR();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.macbook, fragment_macbookAIR).addToBackStack(null).commit();
+                }
+            }
+        });
     }
 
     @Override

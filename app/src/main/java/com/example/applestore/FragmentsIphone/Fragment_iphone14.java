@@ -79,11 +79,10 @@ public class Fragment_iphone14 extends Fragment {
 
     private void buildInitialData() {
 
-        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
-        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
-        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
-        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
-        Fragment_iphone14.add(new ListForImage(R.drawable.iphone_14));
+        Fragment_iphone14.add(new ListForImage(R.drawable._4iphone_phh));
+        Fragment_iphone14.add(new ListForImage(R.drawable._4iphone_costas_ph));
+        Fragment_iphone14.add(new ListForImage(R.drawable._4iphone_camera_ph));
+
 
 
     }
