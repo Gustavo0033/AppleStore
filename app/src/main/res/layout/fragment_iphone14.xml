@@ -19,11 +19,9 @@
     </TextView>
 
 
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_iphone14"
         android:layout_width="match_parent"
-         android:layout_marginTop="70sp"
-        android:layout_height="283dp" />
+        android:layout_height="420dp"
+        android:layout_marginTop="70sp" />
 </FrameLayout>

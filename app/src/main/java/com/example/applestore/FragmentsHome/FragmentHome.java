@@ -78,7 +78,7 @@ public class FragmentHome extends Fragment {
 
     private void buildInitalData() {
 
-        FragmentHome.add(new MainList("iPhone 14 Grande e grandão.",R.drawable.image_home_iphone14));
+        FragmentHome.add(new MainList("iPhone 14 Grande e grandão.",R.drawable._4iphone_phh));
         FragmentHome.add(new MainList("iPhone 14 Pro Pro. E além.",R.drawable.image_home_iphone14));
 
     }

@@ -3,12 +3,19 @@ package com.example.applestore.FragmentMacbook;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import com.example.applestore.Adapters.AdaptersForProducts;
+import com.example.applestore.List.ListForImage;
 import com.example.applestore.R;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +23,8 @@ import com.example.applestore.R;
  * create an instance of this fragment.
  */
 public class Fragment_MacbookAIR extends Fragment {
+
+    private ArrayList<ListForImage>Macbook = new ArrayList<>();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +70,26 @@ public class Fragment_MacbookAIR extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment__macbook_a_i_r, container, false);
+        View view = inflater.inflate(R.layout.fragment__macbook_a_i_r, container, false);
+
+        initRecyclerView(view);
+        buildInitialData();
+        return view;
+    }
+
+    private void buildInitialData() {
+
+        Macbook.add(new ListForImage(R.drawable.macbook_air_m1_ph));
+        Macbook.add(new ListForImage(R.drawable.macbook_air_m1_ph));
+        Macbook.add(new ListForImage(R.drawable.macbook_air_m1_ph));
+    }
+
+    private void initRecyclerView(View view) {
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerviewMAC);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        AdaptersForProducts adapter = new AdaptersForProducts(Macbook);
+        recyclerView.setAdapter(adapter);
     }
 }
