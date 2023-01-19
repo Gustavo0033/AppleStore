@@ -13,14 +13,15 @@
         android:text="@string/AirPods"
         android:layout_gravity="center|top"
         android:textStyle="italic"
+        android:layout_marginTop="15dp"
         android:textColor="?android:textColorPrimary"
-        android:textSize="24sp">
+        android:textSize="30sp">
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragmentAirPodsssss"
         android:layout_width="match_parent"
-        android:layout_height="749dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="761dp"
+        android:layout_marginTop="70dp"
         tools:listitem="@layout/produtos" />
 </FrameLayout>

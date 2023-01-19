@@ -15,7 +15,8 @@
         android:textAlignment="center"
         android:textStyle="italic"
         android:textColor="?android:textColorPrimary"
-        android:textSize="24sp"
+        android:textSize="30sp"
+        android:layout_marginTop="15dp"
         android:text="@string/iPhone">
     </TextView>
 
@@ -23,7 +24,7 @@
         android:id="@+id/recyclerViewiPhones"
         android:layout_width="match_parent"
         android:layout_height="710dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         tools:listitem="@layout/produtos" />
 
 </FrameLayout>

@@ -79,6 +79,10 @@ public class Acessorios extends Fragment {
     private void buildInitialData() {
 
         Acessorios.add(new MainList("MagSafe", R.drawable.magsafe));
+        Acessorios.add(new MainList("Capas e Proteção", R.drawable.capa_de_iphone));
+        Acessorios.add(new MainList("Cerregadores sem fio", R.drawable.carregado_sem_fio));
+        Acessorios.add(new MainList("Criatividade", R.drawable.criatividade_apple));
+        Acessorios.add(new MainList("AirTag", R.drawable.airtag_icon));
 
     }
 

@@ -90,7 +90,7 @@ public class AirPods extends Fragment {
 
         FragmentAirPods.add(new MainList("Airpods 2° Geração",R.drawable.airpods_2geracao_ph));
         FragmentAirPods.add(new MainList("Airpods 3° Geração", R.drawable.airpods_3geracao_ph));
-        FragmentAirPods.add(new MainList("Airpods Pro 2° Geração",R.drawable.airpods_3geracao_ph));
+        FragmentAirPods.add(new MainList("Airpods Pro 2° Geração",R.drawable.airpods_pro2geracao));
         FragmentAirPods.add(new MainList("Airpods Max", R.drawable.airpods_max));
 
 

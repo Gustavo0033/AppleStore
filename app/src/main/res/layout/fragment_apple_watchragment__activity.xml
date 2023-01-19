@@ -16,17 +16,18 @@
         android:layout_height="wrap_content"
         android:textStyle="italic"
         android:textAlignment="center"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center|top"
         android:text="@string/AppleWatch"
         android:textColor="?android:textColorPrimary"
-        android:textSize="24sp">
+        android:textSize="30sp">
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAppleWatch"
         android:layout_width="match_parent"
         android:layout_height="719dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         tools:listitem="@layout/produtos" />
 
 </FrameLayout>

@@ -11,9 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/More"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textColor="?android:textColorPrimary"
         android:textStyle="italic"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center|top">
     </TextView>
 
@@ -21,8 +22,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMore"
         android:layout_width="match_parent"
-        android:layout_height="749dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="717dp"
+        android:layout_marginTop="70dp"
         tools:listitem="@layout/produtos" />
 
 </FrameLayout>
