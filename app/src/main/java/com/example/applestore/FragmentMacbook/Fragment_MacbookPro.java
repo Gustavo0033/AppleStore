@@ -1,4 +1,4 @@
-package com.example.applestore.FragmentsForActivity;
+package com.example.applestore.FragmentMacbook;
 
 import android.os.Bundle;
 
@@ -10,20 +10,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.applestore.Adapters.MyAdapterMore;
-import com.example.applestore.List.MainList;
+import com.example.applestore.Adapters.AdaptersForProducts;
+import com.example.applestore.List.ListForImage;
 import com.example.applestore.R;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MoreFragment_Activity#newInstance} factory method to
+ * Use the {@link Fragment_MacbookPro#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MoreFragment_Activity extends Fragment {
-    private ArrayList<MainList> MoreArrayList = new ArrayList<>();
+public class Fragment_MacbookPro extends Fragment {
 
+    private ArrayList<ListForImage> MacbookPro14Pol = new ArrayList<>();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +34,7 @@ public class MoreFragment_Activity extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MoreFragment_Activity() {
+    public Fragment_MacbookPro() {
         // Required empty public constructor
     }
 
@@ -44,11 +44,11 @@ public class MoreFragment_Activity extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MoreFragment_Activity.
+     * @return A new instance of fragment Fragment_MacbookPro.
      */
     // TODO: Rename and change types and number of parameters
-    public static MoreFragment_Activity newInstance(String param1, String param2) {
-        MoreFragment_Activity fragment = new MoreFragment_Activity();
+    public static Fragment_MacbookPro newInstance(String param1, String param2) {
+        Fragment_MacbookPro fragment = new Fragment_MacbookPro();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,33 +69,29 @@ public class MoreFragment_Activity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment__macbook_pro, container, false);
 
-        View view = inflater.inflate(R.layout.fragment_more__activity, container, false);
-
-        buildListData();
+        buildInitialData();
         initRecyclerView(view);
         return view;
     }
 
     private void initRecyclerView(View view) {
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewMore);
-        LinearLayoutManager LinearLayout = new LinearLayoutManager(getActivity());
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerview_macbookPro14Pol);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
 
-        recyclerView.setLayoutManager(LinearLayout);
-        MyAdapterMore adapter = new MyAdapterMore(MoreArrayList);
+        AdaptersForProducts adapter = new AdaptersForProducts(MacbookPro14Pol);
         recyclerView.setAdapter(adapter);
+
     }
 
-    private void buildListData() {
-        MoreArrayList.add(new MainList("Airpods",R.drawable.airpods_home));
-        MoreArrayList.add(new MainList("iPad",R.drawable.ipads_home));
-        MoreArrayList.add(new MainList("iMac",R.drawable.imaac));
-        MoreArrayList.add(new MainList("Mac Studio",R.drawable.macstudio));
-        MoreArrayList.add(new MainList("Mac Mini",R.drawable.macmini));
-        MoreArrayList.add(new MainList("Studio Display",R.drawable.studiodisplay));
-        MoreArrayList.add(new MainList("Mac Pro", R.drawable.mac_pro));
-        MoreArrayList.add(new MainList("Acessórios",R.drawable.acessorios));
+    private void buildInitialData() {
+
+        MacbookPro14Pol.add(new ListForImage(R.drawable._4pol_macbook_pro));
+        MacbookPro14Pol.add(new ListForImage(R.drawable._4pol_macbook_pro02));
+        MacbookPro14Pol.add(new ListForImage(R.drawable._4pol_macbook_pro03));
 
 
     }

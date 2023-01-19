@@ -10,8 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.applestore.FragmentsMore.Acessorios;
 import com.example.applestore.FragmentsMore.AirPods;
 import com.example.applestore.FragmentsMore.MacMini;
+import com.example.applestore.FragmentsMore.MacPro;
 import com.example.applestore.FragmentsMore.StudioDisplay;
 import com.example.applestore.FragmentsMore.iMac;
 import com.example.applestore.FragmentsMore.iPad;
@@ -78,6 +80,17 @@ public class MyAdapterMore extends RecyclerView.Adapter<MyAdapterMore.MyViewHold
                     StudioDisplay studioDisplay  = new StudioDisplay();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec02, studioDisplay).addToBackStack(null).commit();
                 }
+                else if (position ==6){ // CLICK DO Mac pro
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    MacPro macPro  = new MacPro();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec02, macPro).addToBackStack(null).commit();
+
+                } else if (position ==7){ // CLICK De acessarios
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    Acessorios acessorios  = new Acessorios();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec02, acessorios).addToBackStack(null).commit();
+                }
+
 
             }
         });

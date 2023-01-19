@@ -3,27 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/macbook"
-
-    tools:context=".FragmentsForActivity.MacbookFragment_Activity">
+    android:background="@drawable/walpaper_macbookpro_"
+    tools:context=".FragmentMacbook.Fragment_MacbookPro">
 
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
         android:text="@string/Macbook"
-        android:textAlignment="center"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="24dp"
-        android:textStyle="italic">
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_gravity="center|top">
     </TextView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewMac"
-        android:layout_width="match_parent"
-        android:layout_height="721dp"
-        android:layout_marginTop="40dp"
-        tools:listitem="@layout/produtos" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_macbookPro14Pol"
+        android:layout_width="match_parent"
+        android:layout_height="377dp"
+        android:layout_marginTop="70dp"/>
 </FrameLayout>

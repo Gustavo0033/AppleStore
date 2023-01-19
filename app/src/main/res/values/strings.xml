@@ -49,4 +49,10 @@
     <string name="MacbookAirM2">Macbook Air M2</string>
 
 
+    <!-- MacPro -->
+    <string name="MacPro">Mac Pro</string>
+
+    <!-- Acessorios -->
+    <string name="Acessorios">Acessórios</string>
+
 </resources>

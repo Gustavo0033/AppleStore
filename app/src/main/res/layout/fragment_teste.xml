@@ -24,7 +24,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewWIthImage"
         android:layout_width="match_parent"
-        android:layout_height="650dp"
+        android:layout_height="684dp"
         android:layout_marginTop="70dp"
         tools:listitem="@layout/produtos02_apenas_imagem" />
 

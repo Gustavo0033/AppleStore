@@ -3,26 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rec02"
-    tools:context=".FragmentsForActivity.MoreFragment_Activity">
+    android:background="@color/white"
+    tools:context=".FragmentsMore.MacPro">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/More"
-        android:textSize="24sp"
-        android:textColor="?android:textColorPrimary"
-        android:textStyle="italic"
-        android:layout_gravity="center|top">
+        android:text="@string/MacPro"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="15dp">
     </TextView>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewMore"
+        android:id="@+id/recyclerView_MacPro"
         android:layout_width="match_parent"
-        android:layout_height="749dp"
-        android:layout_marginTop="40dp"
-        tools:listitem="@layout/produtos" />
-
+        android:layout_marginTop="70dp"
+        android:layout_height="336dp" />
 </FrameLayout>
